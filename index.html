@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Developer Portfolio | Laravel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Typed.js for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <div class="text-xl sm:text-2xl font-bold text-indigo-600">Programer</div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#home" class="font-medium hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="font-medium hover:text-indigo-600 transition">About Me</a>
+                <a href="#projects" class="font-medium hover:text-indigo-600 transition">Projects</a>
+                <a href="#contact" class="font-medium hover:text-indigo-600 transition">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+                <div class="hamburger w-6 flex flex-col justify-between items-center">
+                    <div class="line w-full h-0.5 bg-gray-600 mb-1.5 transition-all"></div>
+                    <div class="line w-full h-0.5 bg-gray-600 mb-1.5 transition-all"></div>
+                    <div class="line w-full h-0.5 bg-gray-600 transition-all"></div>
+                </div>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed inset-0 bg-white z-40 pt-16 px-6">
+            <div class="flex flex-col space-y-6 py-8">
+                <a href="#home" class="text-lg nav-link font-medium border-b border-gray-100 pb-4">Home</a>
+                <a href="#services" class="text-lg nav-link font-medium border-b border-gray-100 pb-4">Services</a>
+                <a href="#projects" class="text-lg nav-link font-medium border-b border-gray-100 pb-4">Projects</a>
+                <a href="#testimonials" class="text-lg nav-link font-medium border-b border-gray-100 pb-4">Testimonials</a>
+                <a href="#contact" class="text-lg nav-link font-medium border-b border-gray-100 pb-4">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Tech Stack Animation -->
+    <section id="home" class="pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:py-[8rem]">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-indigo-500 rounded-full filter blur-3xl animate-float-1">
+            </div>
+            <div
+                class="absolute bottom-10 right-20 w-40 h-40 bg-purple-600 rounded-full filter blur-3xl animate-float-2">
+            </div>
+        </div>
+
+        <div class="container md:py-32 mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0 px-2 animate-text">
+                    <h4 class="text-base md:text-lg text-indigo-600 mb-2">Hello, I'm</h4>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">Obaida Mohammed</h1>
+
+                    <!-- Typing Animation Element -->
+                    <h2
+                        class="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-4 md:mb-6 h-10 sm:h-12 md:h-14 flex items-center">
+                        <span id="typed-text" class="mr-1"></span>
+                        <span class="typed-cursor">|</span>
+                    </h2>
+
+                    <p class="text-gray-600 mb-6 md:mb-8 max-w-md text-sm sm:text-base">
+                        I build secure, scalable backend systems with Laravel. Specializing in API development.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact"
+                            class="bg-indigo-600 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-medium hover:bg-indigo-700 transition text-center">My
+                            Cv</a>
+                        <a href="#projects"
+                            class="border border-indigo-600 text-indigo-600 px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-medium hover:bg-indigo-50 transition text-center">View
+                            Work</a>
+                    </div>
+                </div>
+
+                <!-- Image with Tech Stack -->
+                <div class="lg:w-1/2 relative z-10 animate-fade-in-up delay-100">
+                    <div class="relative">
+                        <!-- Developer Image -->
+                        <div
+                            class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 mx-auto rounded-full overflow-hidden border-4 border-white border-opacity-20 shadow-2xl">
+                            <img src="images/photo_2025-03-26_00-03-06.jpg" alt="Laravel Developer"
+                                class="object-cover">
+                        </div>
+
+                        <!-- Animated Tech Logos -->
+                        <div
+                            class="absolute -top-6 -left-6 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl animate-tech-bounce-1">
+                            <img src="https://laravel.com/img/logomark.min.svg" alt="Laravel" class="w-8 h-8">
+                        </div>
+
+                        <div
+                            class="absolute -bottom-4 -right-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-xl animate-tech-bounce-2">
+                            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                alt="GitHub" class="w-8 h-8">
+                        </div>
+
+                        <div
+                            class="absolute top-1/2 -right-8 w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-xl animate-tech-bounce-3">
+                            <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL"
+                                class="w-10 h-6">
+                        </div>
+
+                        <div
+                            class="absolute bottom-1/4 -left-8 w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-xl animate-tech-bounce-4">
+                            <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+                                alt="Docker" class="w-8 h-8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 relative inline-block">
+                    <span class="relative z-10">
+                        About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
+                    </span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-2 bg-indigo-100 dark:bg-indigo-800 opacity-75 -z-0 transform translate-y-1"></span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Passionate Laravel developer seeking new opportunities
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Introduction Card -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 sm:p-8 mb-8 animate-fade-in-up">
+                    <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-800 dark:text-white">
+                        Junior <span class="text-indigo-600 dark:text-indigo-400">Laravel Developer</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        With 2+ years of hands-on experience in Laravel development, I'm actively looking to join a
+                        progressive tech company where I can contribute to meaningful projects while expanding my
+                        backend development skills. I specialize in building efficient APIs and database-driven
+                        applications with clean, maintainable code.
+                    </p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <!-- Experience -->
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center animate-fade-in-up delay-100">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-4xl font-bold mb-2">
+                            <span class="counter" data-target="2">0</span>
+                        </div>
+                        <h4 class="text-gray-800 dark:text-white font-medium">Years Experience</h4>
+                    </div>
+
+                    <!-- Projects -->
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center animate-fade-in-up delay-200">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-4xl font-bold mb-2">
+                            <span class="counter" data-target="4">0</span>
+                        </div>
+                        <h4 class="text-gray-800 dark:text-white font-medium">Projects Built</h4>
+                    </div>
+
+                    <!-- Availability -->
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center animate-fade-in-up delay-300">
+                        <div class="text-indigo-600 dark:text-indigo-400 text-4xl font-bold mb-2">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4 class="text-gray-800 dark:text-white font-medium">Open for Work</h4>
+                    </div>
+                </div>
+
+                <!-- Skills & Expertise -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 sm:p-8 mb-8 animate-fade-in-up delay-400">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 dark:text-white">Technical Expertise</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-badge">
+                            <i class="fab fa-laravel mr-2"></i> Laravel
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fas fa-database mr-2"></i> MySQL
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fas fa-plug mr-2"></i> RESTful APIs
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fab fa-aws mr-2"></i> AWS
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fab fa-git-alt mr-2"></i> Git
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fab fa-docker mr-2"></i> Docker
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fas fa-shield-alt mr-2"></i> Security
+                        </span>
+                        <span class="skill-badge">
+                            <i class="fas fa-tachometer-alt mr-2"></i> Optimization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Career Goals -->
+                <div class="bg-indigo-50 dark:bg-gray-700 rounded-xl shadow-md p-6 sm:p-8 animate-fade-in-up delay-500">
+                    <h3 class="text-xl font-bold mb-4 text-indigo-800 dark:text-indigo-300">Career Objectives</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 dark:text-indigo-400 mt-1 mr-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Seeking a <strong>junior Laravel developer</strong> position in a collaborative
+                                environment
+                                where I can contribute to impactful projects while growing my technical expertise.
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 dark:text-indigo-400 mt-1 mr-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Passionate about <strong>learning best practices</strong> from experienced developers
+                                and implementing them in production environments.
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-indigo-600 dark:text-indigo-400 mt-1 mr-3">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300">
+                                Excited to <strong>join a team</strong> where I can both contribute my current skills
+                                and continuously expand my knowledge.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Styles -->
+    <style>
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-up.delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .animate-fade-in-up.delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-fade-in-up.delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .animate-fade-in-up.delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-fade-in-up.delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .skill-badge {
+            @apply bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full text-sm flex items-center;
+            @apply transition-all hover:bg-indigo-100 dark:hover:bg-indigo-900 hover:text-indigo-700 dark:hover:text-indigo-300;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Counter Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+
+            const animateCounters = () => {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(animateCounters, 1);
+                    } else {
+                        counter.innerText = target + '+';
+                    }
+                });
+            };
+
+            // Trigger on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.counter').forEach(counter => {
+                observer.observe(counter.parentElement);
+            });
+        });
+    </script>
+
+    <!-- Projects Section with Load More -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 relative inline-block">
+                    <span class="relative z-10">My <span class="text-indigo-600">Projects</span></span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-2 bg-indigo-100 opacity-75 -z-0 transform translate-y-1"></span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Some of my recent Laravel backend projects</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Initial Projects (visible by default) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
+                    style="opacity: 1; transform: translateY(0px);">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/4F46E5/FFFFFF?text=E-Commerce+API"
+                            alt="E-Commerce API"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <span class="bg-indigo-600 text-white text-xs px-2 py-1 rounded">Laravel + MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce API</h3>
+                        <p class="text-gray-600 mb-4">Complete backend system for online store with payment integration
+                            and inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">REST API</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">Stripe</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">JWT Auth</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#"
+                                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm flex items-center">
+                                Live Demo <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
+                    style="opacity: 1; transform: translateY(0px);">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/4F46E5/FFFFFF?text=E-Commerce+API"
+                            alt="E-Commerce API"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <span class="bg-indigo-600 text-white text-xs px-2 py-1 rounded">Laravel + MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce API</h3>
+                        <p class="text-gray-600 mb-4">Complete backend system for online store with payment integration
+                            and inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">REST API</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">Stripe</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">JWT Auth</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#"
+                                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm flex items-center">
+                                Live Demo <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 animate-fade-in"
+                    style="opacity: 1; transform: translateY(0px);">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400/4F46E5/FFFFFF?text=E-Commerce+API"
+                            alt="E-Commerce API"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                            <span class="bg-indigo-600 text-white text-xs px-2 py-1 rounded">Laravel + MySQL</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-Commerce API</h3>
+                        <p class="text-gray-600 mb-4">Complete backend system for online store with payment integration
+                            and inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">REST API</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">Stripe</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">JWT Auth</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="#"
+                                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm flex items-center">
+                                Live Demo <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-indigo-600">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More projects will be loaded here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more"
+                    class="inline-flex items-center px-8 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20">
+                    <span id="load-text">Load More Projects</span>
+                    <span id="load-spinner" class="ml-2 hidden">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animation Styles -->
+    <style>
+        .project-card {
+            @apply bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- JavaScript for Load More Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const projectsContainer = document.getElementById('projects-container');
+            const loadMoreBtn = document.getElementById('load-more');
+            const loadText = document.getElementById('load-text');
+            const loadSpinner = document.getElementById('load-spinner');
+
+            // Sample projects data (replace with your actual projects)
+            const allProjects = [
+                {
+                    title: "SAAS Platform",
+                    desc: "Multi-tenant application with subscription billing.",
+                    tags: ["Laravel", "Vue", "Stripe"],
+                    img: "https://via.placeholder.com/600x400/7C3AED/FFFFFF?text=SAAS+Platform"
+                },
+                {
+                    title: "Mobile Backend",
+                    desc: "API for social mobile app with real-time features.",
+                    tags: ["Laravel", "MongoDB", "WebSockets"],
+                    img: "https://via.placeholder.com/600x400/818CF8/FFFFFF?text=Mobile+Backend"
+                },
+                {
+                    title: "CMS System",
+                    desc: "Custom content management system with modular design.",
+                    tags: ["Laravel", "Livewire", "Tailwind"],
+                    img: "https://via.placeholder.com/600x400/10B981/FFFFFF?text=CMS+System"
+                },
+                {
+                    title: "Inventory Management",
+                    desc: "Advanced inventory tracking with reporting.",
+                    tags: ["Laravel", "MySQL", "Charts"],
+                    img: "https://via.placeholder.com/600x400/F59E0B/FFFFFF?text=Inventory+System"
+                },
+                {
+                    title: "API Gateway",
+                    desc: "Centralized API management system.",
+                    tags: ["Laravel", "JWT", "Microservices"],
+                    img: "https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=API+Gateway"
+                }
+            ];
+
+            let visibleProjects = 0;
+
+            // Load more projects function
+            loadMoreBtn.addEventListener('click', function () {
+                loadText.textContent = 'Loading...';
+                loadSpinner.classList.remove('hidden');
+                loadMoreBtn.disabled = true;
+
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Add next projects
+                    for (let i = visibleProjects; i < visibleProjects + 3 && i < allProjects.length; i++) {
+                        const project = allProjects[i];
+                        const projectEl = document.createElement('div');
+                        projectEl.className = 'project-card animate-slide-up mt-4 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 animate-fade-in';
+                        projectEl.style.animationDelay = `${(i - visibleProjects) * 0.1}s`;
+                        projectEl.innerHTML = `
+              <div class="relative h-48 overflow-hidden">
+                <img src="${project.img}" 
+                     alt="${project.title}"
+                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+                  <span class="bg-indigo-600 text-white text-xs px-2 py-1 rounded">${project.tags[0]} + ${project.tags[1]}</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                <p class="text-gray-600 mb-4">${project.desc}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  ${project.tags.map(tag => `<span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">${tag}</span>`).join('')}
+                </div>
+                <div class="flex justify-between items-center">
+                  <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium text-sm flex items-center">
+                    Live Demo <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                  </a>
+                  <a href="#" class="text-gray-500 hover:text-indigo-600">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            `;
+                        projectsContainer.appendChild(projectEl);
+                    }
+
+                    visibleProjects += 3;
+
+                    // Update button state
+                    if (visibleProjects >= allProjects.length) {
+                        loadText.textContent = 'All Projects Loaded';
+                        loadMoreBtn.disabled = true;
+                        loadMoreBtn.classList.remove('hover:scale-105', 'hover:bg-indigo-700');
+                        loadMoreBtn.classList.add('bg-indigo-400', 'cursor-default');
+                    } else {
+                        loadText.textContent = 'Load More Projects';
+                    }
+
+                    loadSpinner.classList.add('hidden');
+                    loadMoreBtn.disabled = false;
+                }, 800);
+            });
+        });
+    </script>
+
+    <!-- Animation Script -->
+    <script>
+        // Simple intersection observer to trigger animations when scrolling
+        document.addEventListener('DOMContentLoaded', function () {
+            const projects = document.querySelectorAll('.animate-fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            projects.forEach(project => {
+                observer.observe(project);
+            });
+        });
+    </script>
+
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                    <span class="relative">
+                        <span class="text-indigo-600">Contact</span> Me
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-2 bg-indigo-100 dark:bg-indigo-900 opacity-75 -z-10 transform translate-y-2"></span>
+                    </span>
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Have a project in mind? Let's turn your ideas into reality!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 animate-fade-in-left">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800 dark:text-white">Send me a message</h3>
+
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your
+                                    Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white transition-all"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your
+                                    Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white transition-all"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject"
+                                class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white transition-all"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Your
+                                Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:text-white transition-all"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg shadow-indigo-500/10 flex items-center justify-center">
+                            <span id="submitText">Send Message</span>
+                            <svg id="submitSpinner" class="w-5 h-5 ml-2 hidden animate-spin"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor"
+                                    stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                                </path>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8 animate-fade-in-right">
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div
+                            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-2 border-indigo-500">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 dark:bg-indigo-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-indigo-600 dark:text-indigo-300 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1">Email</h4>
+                                    <a href="mailto:hello@example.com"
+                                        class="text-indigo-600 dark:text-indigo-400 hover:underline">obeda.aljorany@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300  border-indigo-500">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 dark:bg-indigo-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-indigo-600 dark:text-indigo-300 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1">Phone</h4>
+                                    <a href="tel:+1234567890"
+                                        class="text-indigo-600 dark:text-indigo-400 hover:underline">+496 7724389401</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300  border-indigo-500">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 dark:bg-indigo-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-indigo-600 dark:text-indigo-300 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1">Location</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Iraq, Diyala</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300  border-indigo-500">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-100 dark:bg-indigo-900 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-indigo-600 dark:text-indigo-300 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white mb-1">Working Hours</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Mon-Fri: 9AM - 5PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-white dark:bg-gray-800 border-b-2 border-indigo-500 p-6 rounded-xl shadow-lg">
+                        <h4 class="font-bold text-gray-800 dark:text-white mb-4">Follow Me</h4>
+                        <div class="flex space-x-6">
+                            <a href="https://github.com/obaida09"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/obaida-mohammed-b593b12a3/"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.codewars.com/users/Obaida_01"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-indigo-600 hover:text-white transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Submission Script -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submitText');
+            const submitSpinner = document.getElementById('submitSpinner');
+
+            // Show loading state
+            submitText.textContent = 'Sending...';
+            submitSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual AJAX call)
+            setTimeout(() => {
+                // Reset form
+                e.target.reset();
+
+                // Show success state
+                submitText.textContent = 'Message Sent!';
+                submitSpinner.classList.add('hidden');
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    submitText.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+<style>
+    .codewars-icon {
+      width: 1.25rem; /* نفس حجم النص text-xl */
+      height: 1.25rem;
+      fill: currentColor; /* ليتغير لونها مع hover */
+    }
+  </style>
+    <!-- Footer - Redesigned -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Column 1: About -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-indigo-400 mr-2">Portfolio</div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Professional Laravel backend developer specializing in building robust, scalable web
+                        applications and APIs.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/obaida09" class="text-gray-400 hover:text-indigo-400 transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/obaida-mohammed-b593b12a3/" class="text-gray-400 hover:text-indigo-400 transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://www.codewars.com/users/Obaida_01" class="text-gray-400 hover:text-indigo-400 transition">
+                            <i class="fas fa-code text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-indigo-400 transition text-sm">Home</a></li>
+                        <li><a href="#about"
+                                class="text-gray-400 hover:text-indigo-400 transition text-sm">About Me</a></li>
+                        <li><a href="#projects"
+                                class="text-gray-400 hover:text-indigo-400 transition text-sm">Projects</a></li>
+                        <li><a href="#contact"
+                                class="text-gray-400 hover:text-indigo-400 transition text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition text-sm">Laravel
+                                Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition text-sm">API
+                                Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition text-sm">Database
+                                Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-indigo-400 transition text-sm">Performance
+                                Optimization</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-white border-b border-gray-700 pb-2">Contact Info</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-indigo-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400 text-sm">Iraq, Diayal</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-indigo-400 mr-3"></i>
+                            <span class="text-gray-400 text-sm">obeda.aljorany@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-indigo-400 mr-3"></i>
+                            <span class="text-gray-400 text-sm">+496 7724389401</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright & Credits -->
+            <div class="border-t border-gray-800 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-3 md:mb-0">
+                        &copy; 2023 Obadia Mohammed. All rights reserved.
+                    </p>
+                    <!-- <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-indigo-400 transition text-sm">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-indigo-400 transition text-sm">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-indigo-400 transition text-sm">Sitemap</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburger = document.querySelector('.hamburger');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+
+            // Toggle body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <!-- Typing Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Typed.js
+            const typed = new Typed('#typed-text', {
+                strings: [
+                    'Laravel Backend Developer',
+                    'API Specialist',
+                    'Open Source Contributor|',
+                    // 'Database Architect',
+                    // 'PHP Expert'
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 1500,
+                startDelay: 500,
+                loop: true,
+                showCursor: true,
+                cursorChar: '|'
+            });
+
+            // Register ScrollTrigger plugin
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate elements with .animate-text class
+            gsap.from('.animate-text', {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                ease: "power3.out"
+            });
+
+            // Floating animation for hero image
+            gsap.to('.animate-float', {
+                y: 20,
+                duration: 3,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+
+            // Card animations - optimized for mobile
+            gsap.from('.animate-card', {
+                scrollTrigger: {
+                    trigger: '.animate-card',
+                    start: "top 90%",
+                    toggleActions: "play none none none",
+                    markers: false
+                },
+                opacity: 0,
+                y: 30,
+                duration: 0.6,
+                stagger: 0.15,
+                ease: "back.out(1.2)"
+            });
+
+            // Count up animation for stats - mobile optimized
+            const counters = document.querySelectorAll('.animate-count');
+
+            function animateCounter(counter) {
+                const target = +counter.innerText;
+                const duration = 1500; // Shorter duration for mobile
+                const step = target / (duration / 16);
+
+                let current = 0;
+                const updateCount = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.innerText = Math.floor(current);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                ScrollTrigger.create({
+                    trigger: counter,
+                    start: "top 90%",
+                    onEnter: updateCount,
+                    once: true
+                });
+            }
+
+            // Only animate counters if not on a very small mobile device
+            if (window.innerWidth > 360) {
+                counters.forEach(animateCounter);
+            } else {
+                counters.forEach(counter => {
+                    counter.classList.remove('animate-count');
+                });
+            }
+
+            // Optimize scroll trigger for mobile
+            ScrollTrigger.config({
+                autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
+                ignoreMobileResize: true
+            });
+
+            // Recalculate ScrollTrigger on window resize
+            window.addEventListener('resize', () => {
+                ScrollTrigger.refresh();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
